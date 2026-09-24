@@ -14,4 +14,4 @@ This file is for agents editing the skill. Keep maintainer rules here, not in `S
 - Keep every frontmatter string quoted and free of colons.
 - Do not record dates, measurements, timings, session evidence, or incident stories. State the contract and at most one clause on why a rule exists.
 - Do not use em dashes, and do not use semicolons to join sentences.
-- Bump `metadata.version` in the same change whenever agent behavior changes.
+- Bump `metadata.version` by the release-versioning skill's rules for skills.
