@@ -3,7 +3,7 @@ name: "diffscroll"
 description: "Use when an edit is finished and not being committed, when the user asks to see or review changes, or when handing work over for review. Opens pending Git changes in Diffscroll, a live read-only diff viewer, so the user reads a change on screen instead of in a terminal."
 metadata:
   author: "Leeor Nahum"
-  version: "1.0.1"
+  version: "1.1.0"
 ---
 
 # Diffscroll
@@ -20,6 +20,7 @@ diffscroll "<absolute path>"
 - The path must exist. A path that does not opens the folder picker instead.
 - The command returns at once. Do not wait on it or read its output.
 - Every launch opens a new independent window, and an open window is already live, so open one window per task and never relaunch to refresh.
+- Only the session that hands work to the user opens it. A subagent or worker reports its changes to its caller instead, because the caller decides what the user reviews.
 - Diffscroll is read-only. It never stages, commits, or edits anything.
 
 Tell the user in one line what was opened, in the form "Opened <folder or file name> in Diffscroll."
